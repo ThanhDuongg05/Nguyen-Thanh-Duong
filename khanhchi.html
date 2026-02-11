@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Valentine' Day 💖</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            text-align: center;
+            font-family:'Segoe UI', sans-serif;
+            background: linear-gradient(to right,#ff9a9e, #fecfef);
+            color: white;
+            overflow-x: hidden;
+        }
+        h1{
+            margin-top: 50px;
+            font-size: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p{
+            font-size: 22px;
+            width: 80%;
+            margin:auto;
+            animation: fadeln 3s ease-in-out;
+        }
+
+        img{
+            width: 300px;
+            border-radius:20px ;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+            animation: float 3s infinite ease-in-out;
+        }
+
+        button{
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background-color: white;
+            color: #ff4d6d;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ff4d6d;
+            color:white;
+        }
+
+        @keyframes fadeln{
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+
+        @keyframes foalt{
+            0%{transform: translateY(0px);}
+            50%{ transform: translateY(-15px);}
+            100% { transform: translateY(0px);}
+        }
+
+        .heart{
+            position: fixed;
+            color: red;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {top: -10px;}
+            100% {top: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day 💖</h1>
+    
+    <p> Chúc mừng ngày Valentine đầu tiên của 2 đứa ❤️ <br><br> 
+        Tuy là năm nay không được ở gần nhau nhưng mà anh cũng rất vui khi có em bé đồng hành. <br><br> 
+        Mong rằng anh với em sẽ có thêm nhiều niềm vui và hạnh phúc nữa  <br><br> 
+        Và anh muốn 2 đứa mình cùng nhau vượt qua hết khó khăn để mãi bên nhau em nhé 😘 💕 
+    </p>
+
+     <img src=d:\z7332150347953_6ab9da2c8cefa8feb1a28a1e33644707.jpg alt="Love">
+     <br>
+     <button onclick="showLove()">Nhấn vào đây 💌</button>
+
+     <script>
+        function showLove() {
+            alert("Anh yêu em rất nhiều ❤️"); 
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() *window.innerWidth + "px";
+            heart.style.animationDuration = Math.random()* 3 + 2 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        
+        setInterval(createHeart, 300);
+     </script>
+
+</body>
+</html>
