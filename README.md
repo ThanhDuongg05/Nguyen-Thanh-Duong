@@ -1,2 +1,2 @@
-# Nguyen-Thanh-Duong
+# c++
 IT students want to learn experience
